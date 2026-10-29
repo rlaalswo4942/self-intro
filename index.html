@@ -136,6 +136,70 @@
       </div>
     </details>
 
+    <!-- ===== 4주차 ===== -->
+    <details class="week">
+      <summary>4주차 — 게임 루프로 움직이게 하기</summary>
+      <div class="week-body">
+        <details>
+          <summary>한 일</summary>
+          <div class="folder-body">
+            <ul>
+              <li>Step 1. 연습용 흰 공이 좌우로 왕복: <code>gameLoop</code> 안을 지우기 / 계산 / 그리기로 나눔</li>
+              <li>Step 3. 지우기·다음 프레임 예약·시동 줄을 하나씩 빼 보며 원리 확인</li>
+              <li>Step 4. 사과게임을 게임 루프 구조로 바꿈: 남은 시간 막대가 줄어들고 0이 되면 "시간 종료"</li>
+              <li>사과판이 위에서 떨어져 제자리에 멈춤, 사과 숫자는 처음에 한 번만 만들어 저장</li>
+              <li>과제: 속도 튜닝 기록, <a href="https://github.com/rlaalswo4942/my-game/blob/main/회고.md" target="_blank">회고 4주차</a></li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>배운 것</summary>
+          <div class="folder-body">
+            <ul>
+              <li>게임은 숫자 몇 개(위치·속도·시간)를 매 프레임 바꾸고 다시 그리는 것</li>
+              <li><code>requestAnimationFrame</code>으로 다음 프레임을 예약해야 루프가 계속 돈다</li>
+              <li>지우기를 빼면 이전 그림이 남아 잔상이 생긴다</li>
+              <li>튜닝할 숫자는 <code>script.js</code> 위쪽에 모아 두면 바꾸기 쉽다</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </details>
+
+    <!-- ===== 5주차 ===== -->
+    <details class="week">
+      <summary>5주차 — 입력 처리로 조작하기</summary>
+      <div class="week-body">
+        <details>
+          <summary>한 일</summary>
+          <div class="folder-body">
+            <ul>
+              <li>마우스 드래그로 사과판 위에 직사각형 선택 상자 그리기</li>
+              <li>위쪽에 "합계 ○○ · 사과 ○개" 미리보기, 합이 10이면 상자가 초록</li>
+              <li>판 밖으로 끌어도 상자가 가장자리 칸에서 멈춤</li>
+              <li>캔버스 밖에서 손을 떼도 드래그가 끝나도록 손 떼기 신호를 페이지 전체에서 받음</li>
+              <li>과제: 선택 상자 투명도 튜닝(0.35 채택), 방식 A/B 비교, <a href="https://github.com/rlaalswo4942/my-game/blob/main/회고.md" target="_blank">회고 5주차</a></li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>배운 것</summary>
+          <div class="folder-body">
+            <ul>
+              <li>이벤트 = "무슨 일이 생기면 이걸 해 줘"라고 미리 등록해 두는 것</li>
+              <li>이벤트는 상태(<code>isDragging</code>, 시작 칸, 끝 칸)만 적고, 계산과 그리기는 게임 루프가 맡는다</li>
+              <li>마우스 좌표는 <code>getBoundingClientRect()</code>로 캔버스 기준으로 바꿔야 어긋나지 않는다</li>
+              <li><code>=</code>는 넣기, <code>===</code>는 같은지 비교</li>
+            </ul>
+          </div>
+        </details>
+
+        <a class="game-link" href="https://rlaalswo4942.github.io/my-game/" target="_blank">🍎 지금 사과게임 플레이하기 →</a>
+      </div>
+    </details>
+
     <footer id="today"></footer>
     <p class="deployed">GitHub Pages로 배포됨</p>
   </main>
